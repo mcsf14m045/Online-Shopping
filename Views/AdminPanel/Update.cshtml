@@ -1,0 +1,102 @@
+﻿@using term.Models
+@model IEnumerable<Item>
+
+@{
+    Layout = "~/Views/Shared/AdminNavBar.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>UpdatePost</title>
+</head>
+<body style="background-color:black">
+    <div>
+        <label class="text-center" style="font-size: 70px; font-family: Stencil; color: #d49c43; width: 100%;">Update</label>
+    </div>
+    <br>
+    <br />
+
+    
+        <div class="container well well-sm col-lg-8" style="margin-left:15%">
+            <table class="table" style="border: solid; border-color: #d49c43">
+
+                <thead>
+                    <tr class="" style="text-align: center; background-color: #d49c43">
+
+                        <th>ID</th>
+                        <th>Name</th>
+
+                        <th>Update</th>
+                    </tr>
+                </thead>
+
+                @foreach (Item obj in Model)
+                {
+                    <tr>
+                        <td>@obj.Id</td>
+                        <td>@obj.Name</td>
+
+
+                        <td><a href="/AdminPanel/getItem/@obj.Id" style="color: #d49c43">Update</a></td>
+                    </tr>
+
+                }
+
+
+            </table>
+        </div>
+    
+
+    @*<div id="section">
+            <form class=" col-lg-5 form-inline" role="form" style="border-color:aqua chocolate">
+                <div class="form-group">
+                    <label  for="id" style="font:1000;font-size:medium;font-family:'Segoe UI';color:black;">ID:</label>
+                    <input type="text" id="name" class="form-control" style="font-size:medium;">
+                </div>
+                <br />
+                <br />
+                <div class="form-group">
+                    <label for="name" style="font:1000;font-size:medium;font-family:'Segoe UI';color:black;">Name:</label>
+                    <input type="text" id="name" class="form-control" style="font-size:medium;">
+                </div>
+                <br />
+                <br />
+                <div class="form-group">
+                    <label for="email" style="font:1000;font-size:medium;font-family:'Segoe UI';color:black;">Email Address:</label>
+                    <input type="email" id="email" class="form-control" style="font-size:medium;" >
+                </div>
+                <br />
+                <br />
+                <div class="form-group">
+                    <label for="pwd" style="font-size:medium;font:1000;font-family:'Segoe UI';color:black;">Password:</label>
+                    <input type="password" class="form-control" id="pwd" style="font-size:medium;">
+                </div>
+                <br />
+                <br />
+                <div class="form-group">
+                    <label for="contact"  style="font:1000;font-size:medium;font-family:'Segoe UI';color:black;">Contact:</label>
+                    <input type="number" class="form-control" id="name" style="font-size:medium;">
+                </div>
+                <br />
+                <br />
+                <div class="radio-inline">
+                    <label style="font:1000;font-size:medium;font-family:'Segoe UI';color:black;">Gender: </label>
+                    <br />
+                    <label style="font:1000;font-size:medium;font-family:'Segoe UI';color:black;">
+                        <input type="radio" style="font-size:medium;color:black"> Male
+                    </label>
+                    <br />
+                    <label style="font:1000;font-size:large;font-family:'Segoe UI';color:black;">
+                        <input type="radio" style="font-size:medium;color:black"> Female
+                    </label>
+                </div>
+
+                <br />
+                <button type="submit" class="btn btn-success col-lg-2" style="font-size:medium;color:black;font-family:'Segoe UI'">GO</button>
+            </form>
+        </div>*@
+</body>
+</html>

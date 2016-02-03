@@ -1,0 +1,21 @@
+﻿@using term.Models
+
+@{
+    Layout = "~/Views/Shared/AdminNavBar.cshtml";
+}
+<body style="background-color:black">
+    <div>
+        <label class="text-center" style="font-size: 70px; font-family: Stencil; color: #d49c43; width: 100%;">Details</label>
+    </div>
+    <br>
+    <br />
+    <h1 class="text-center" style="color: #d49c43"> Add Detalis of Item</h1>
+    <form class="container well" action="/AdminPanel/Submit" method="post">
+        <input type="text" name="Name" placeholder="Name OF Item" /><br />
+        <br />
+        <input type="text" name="Price" placeholder="Price OF Item" />
+        <br />
+        <br />
+        <input class="btn btn-default btn-success" type="Submit" />
+    </form>
+</body>

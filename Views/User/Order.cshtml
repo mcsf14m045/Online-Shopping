@@ -1,0 +1,50 @@
+﻿@using term.Models
+@model IEnumerable<Item>
+@{
+
+    ViewBag.Title = "Order";
+@*<a href="~/Views/Home/Index.cshtml">~/Views/Home/Index.cshtml</a>*@
+    Layout = "~/Views/Shared/UserNavBar.cshtml";
+}
+
+<body style="background-color:black">
+    <div>
+        <label class="text-center" style="font-size: 70px; font-family: Stencil; color: #d49c43; width: 100%;"> Order</label>
+    </div>
+    <br>
+    <br />
+    
+        <div class="container well well-sm col-lg-8" style="margin-left:15%">
+            <table class="table" style="border: solid; color: #d49c43">
+
+                <thead>
+                    <tr class="" style="text-align: center;">
+
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Price</th>
+
+
+                    </tr>
+                </thead>
+                
+                    @foreach (Item obj in Model)
+                    {
+                        
+                        <tr>
+                            <td>@obj.Id</td>
+                            <td>@obj.Name</td>
+                            <td>@obj.Price</td>
+
+
+
+                        </tr>
+                                              
+                    }
+                
+                
+
+            </table>
+        </div>
+    
+</body>

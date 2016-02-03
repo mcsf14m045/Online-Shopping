@@ -1,0 +1,31 @@
+﻿@using term.Models
+@model Item
+
+@{
+    Layout = "~/Views/Shared/AdminNavBar.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>getItem</title>
+</head>
+<body style="background-color:black">
+    <div>
+        <label class="text-center" style="font-size: 70px; font-family: Stencil; color: #d49c43; width: 100%;"> Update</label>
+    </div>
+    <br>
+    <br />
+    <div class="container well well-sm">
+        <form action="/AdminPanel/UpdateDb" method="post">
+
+            <input type="hidden" name="Id" value="@Model.Id" />
+            <input type="text" name="Name" value="@Model.Name" />
+            <input type="number" min="0" name="Price" value="@Model.Price" />
+            <input type="submit" class="btn btn-success" value="Done" />
+        </form>
+    </div>
+</body>
+</html>

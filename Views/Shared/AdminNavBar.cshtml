@@ -1,0 +1,64 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+
+
+    <link href="~/Content/hover.css" rel="stylesheet" />
+    <link href="~/Content/hover-min.css" rel="stylesheet" />
+
+    <link href="~/Content/js-image-slider.css" rel="stylesheet" type="text/css" />
+    <script src="~/Content/js-image-slider.js" type="text/javascript"></script>
+    <script src="~/Scripts/jquery-2.1.4.js"></script>
+    <script src="~/Scripts/jquery-2.1.4.min.js"></script>
+
+    <script src="~/Scripts/bootstrap.js"></script>
+
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+
+    <link href="~/Content/bootstrap%20(7).css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="nav navbar-header">
+
+                <a href="#" style="font-family:'Lucida Handwriting';" class="navbar-brand">Online Shopping</a>
+            </div>
+
+            <div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>@Html.ActionLink("Home", "Index", "AdminPanel")</li>
+                    <li>@Html.ActionLink("All Users", "Users", "AdminPanel")</li>
+                    <li>@Html.ActionLink("Category", "Category", "AdminPanel")</li>
+                    <li>@Html.ActionLink("Add", "Type", "AdminPanel")</li>
+                    <li>@Html.ActionLink("Delete", "Delete", "AdminPanel")</li>
+                    <li>@Html.ActionLink("Update", "Update", "AdminPanel")</li>
+                    <li>@Html.ActionLink("SignOut", "SignOut", "AdminPanel")</li>
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    @RenderBody()
+
+
+</body>
+</html>

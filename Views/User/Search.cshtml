@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/UserNavBar.cshtml";
+
+}
+<body style="background-color:black">
+    <div>
+        <label class="text-center" style="font-size: 70px; font-family: Stencil; color: #d49c43; width: 100%;"> Search</label>
+    </div>
+    <br>
+
+    <br />
+
+    <form action="/User/GetAll" method="post">
+
+        <input style="margin-left:40%" type="text" name="price" placeholder="Search by price" />
+        <input type="submit" value="search" />
+    </form>
+</body>

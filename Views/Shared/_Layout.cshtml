@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/js-image-slider.css" rel="stylesheet" />
+    <script src="~/Content/js-image-slider.js"></script>
+    <script src="~/Scripts/jquery-2.1.4.js"></script>
+    <script src="~/Scripts/jquery-2.1.4.min.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <link href="~/Content/bootstrap%20(7).css" rel="stylesheet" />
+
+
+</head>
+<body>
+    <nav class="navbar navbar-default" role="navigation">
+
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+
+
+                <a class="navbar-brand" href="~/Home/Index" style=" font-family: 'Lucida Handwriting'">Online Shopping</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div>
+                @*class="nav navbar-nav navbar-right" id="bs-example-navbar-collapse-1 navbar-brand" style="color:white; font-family:'Lucida Handwriting'">*@
+                <ul class="nav navbar-nav navbar-right">
+
+
+                    <li style="color:white">
+                        <a href="~/Home/Index">Home</a>
+                    </li>
+
+                    <li style="color:white">
+                        <a href="~/Home/Offers">Category</a>
+                    </li>
+
+                    <li style="color:white">
+                        <a class="" href="~/Home/About">About Us</a>
+                    </li>
+
+                    <li style="color:white">
+                        <a href="~/Home/Contact">Contact</a>
+                    </li>
+
+                    <li style="color:white">
+                        <a href="~/Home/Feedback">Feedback</a>
+                    </li>
+
+                    <li style="color:white">
+                        <a href="~/Home/CreateAccount">Create Account</a>
+                    </li>
+
+                    <li style="color:white">
+                        <a href="~/Home/Admin">Login</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    @RenderBody()
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

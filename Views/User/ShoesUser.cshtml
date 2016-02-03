@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "Dress";
+    Layout = "~/Views/Shared/UserNavBar.cshtml";
+}
+
+
+@using term.Models
+@model IEnumerable<Item>
+
+
+<body style="background-color:black">
+    <div>
+        <label class="text-center" style="font-size: 70px; font-family: Stencil; color: #d49c43; width: 100%;"> Shoes</label>
+    </div>
+    <br>
+    <br />
+
+    <div>
+        <div class="row">
+            @foreach (var s in Model)
+            {
+                <div class="col-sm-4 col-md-4 col-lg-4">
+                    <div class="thumbnail">
+                        <img style="max-height:300px;max-width:300px" src="~/Content/Items/@s.Picture" />
+                        <hr />
+                        <div class="caption">
+
+                            <div class="row">
+
+                                <p class="" style="color: #d49c43; padding-left:10px">Name: @s.Name</p>
+                                <h4 class="" style="color: #d49c43; padding-left:10px">Price: @s.Price</h4>
+                                <a href="/User/shop/@s.Id" style="color: #d49c43; padding-left:10px">add to cart</a>
+
+                            </div>
+                            <div class="row">
+
+                                <!--<a href="#" class="btn btn-default" >Hello</a>-->
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</body>

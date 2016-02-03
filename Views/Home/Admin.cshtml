@@ -1,0 +1,75 @@
+﻿@using term.Models
+@model User
+
+@{
+    ViewBag.Title = "Admin";
+
+}
+
+
+<body style="background-color:black">
+    @*style="background-color:black" style=" background:no-repeat;background-image:url(/Content/login.jpg)"*@>
+
+    @* <nav class="nav navbar-fixed-top navbar-inverse " role="navigation">
+            <div class="nav navbar-header" style="padding-left:35%;padding-top:0.5%">
+                <h1 style="color:white;font-family:'Lucida Handwriting'; ">Online Shopping</h1>
+            </div>
+            <div class="pull-right" style=" padding-right:15px;padding-top:1.5%">
+                @Html.ActionLink("Register", "Register", null, new { @class = "btn btn-lg btn-success" })
+
+            </div>
+        </nav>*@
+    <hr />
+    <br />
+    <br />
+    <div class="col-lg-4"></div>
+
+    <div class="col-lg-4" style="opacity: 0.6; padding-top: 3%; color: black; border: 2px solid; border-color: #d49c43; background-color:#e4b9b9; padding-right: 0.5%; ">
+        <div><h4 class="text-center" style="color: black">Login Form</h4></div>
+        <br />
+        <div class="col-lg-4">
+            <br />
+
+            @using (Html.BeginForm("LogIn", "Home", FormMethod.Post))
+            {
+
+                @Html.LabelFor(m => m.Name)
+                @Html.TextBoxFor(m => m.Name, new { @class = "btn", required = "required" })
+                <br />
+
+                <br />
+                @Html.LabelFor(m => m.Password)
+
+
+                @Html.PasswordFor(m => m.Password, new { @class = "btn", required = "required" })
+                <br />
+                <br />
+                <div class="right">
+                    <input type="submit" value="Sign In" class="btn btn-lg btn-primary " style="border:solid;height:50px;width:100px" />
+                </div>
+
+            }
+
+            @*<p>@ViewBag.M</p>*@
+            <br />
+        </div>
+        @*<div class="col-lg-6">
+
+                <br />
+                @using (Html.BeginForm("#", "Login", FormMethod.Post))
+                {
+
+
+
+
+
+
+                    <br />
+                    <br />
+                }
+
+
+
+            </div>*@
+    </div>
+</body>

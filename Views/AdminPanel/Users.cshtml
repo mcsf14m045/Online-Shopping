@@ -1,0 +1,56 @@
+﻿@using term.Models
+
+
+@model List<term.Models.User>
+
+@{
+    ViewBag.Title = "Users";
+    Layout = "~/Views/Shared/AdminNavBar.cshtml";
+}
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+<body style="background-color:black">
+    <div>
+        <label class="text-center" style="font-size: 70px; font-family: Stencil; color: #d49c43; width: 100%;"> Order</label>
+    </div>
+    <br>
+    <br />
+    
+        <div class="container well well-sm col-lg-8" style="margin-left:15%">
+            <table class="table" style="border: solid; color: #d49c43">
+
+                <thead>
+                    <tr class="" style="text-align: center;">
+
+                        <th>Name</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                        <th>Address</th>
+                        <th></th>
+
+                    </tr>
+                </thead>
+                
+                    @foreach (User obj in Model)
+                    {
+                        
+                        <tr>
+                            <td>@obj.Name</td>
+                            <td>@obj.UserName</td>
+                            <td>@obj.Email</td>
+                            <td>@obj.Password</td>
+                            <td>@obj.Address</td>
+                            <td><a href="/AdminPanel/DeleteUser/@obj.Id">Delete</a></td>
+
+
+                        </tr>
+                                              
+                    }
+                
+                
+
+            </table>
+        </div>
+    
+</body>

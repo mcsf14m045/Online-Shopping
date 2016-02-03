@@ -1,0 +1,36 @@
+﻿@{
+
+    ViewBag.Title = "Upload Pic";
+
+    Layout = "~/Views/Shared/AdminNavBar.cshtml";
+}
+
+
+
+<body style="background-color:black">
+    <div>
+        <label class="text-center" style="font-size: 70px; font-family: Stencil; color: #d49c43; width: 100%;"> Picture/Image</label>
+    </div>
+    <br>
+    <br />
+
+
+    <div class="col-lg-4"></div>
+
+    <div class="col-lg-4" style="opacity:0.6;padding-top:3% ;color:black;background-color:antiquewhite;padding-right:0.5%">
+
+
+        <div class="col-lg-8">
+            @using (Html.BeginForm("saveprofile", "AdminPanel", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                <input name="uploadFile" type="file" />
+                <br />
+                <input type="submit" value="Upload File" />
+                <br /><br />
+            }
+        </div>
+    </div>
+
+
+
+</body>

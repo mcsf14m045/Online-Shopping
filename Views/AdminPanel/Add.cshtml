@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/AdminNavBar.cshtml";
+}
+
+<body style="background-color:black">
+    <div>
+        <label class="text-center" style="font-size: 70px; font-family: Stencil; color: #d49c43; width: 100%;"> Detail And Picture</label>
+    </div>
+    <br>
+    <br />
+    
+        <div style="margin-left:25%" class="container well well-sm col-lg-1">
+            <ul class=" nav navbar-nav pull-right " style="padding-top:25px;padding-left:5%">
+
+                <li><a href="/AdminPanel/Form" style="font-family: Papyrus; color: #d49c43; font-size:large" class="hvr-bounce-to-bottom">Details</a></li>
+                <li><a href="/AdminPanel/Picture" style="font-family: Papyrus; color: #d49c43; font-size: large" class="hvr-bounce-to-top">Picture</a></li>
+
+            </ul>
+            <form action="/AdminPanel/AddToDb" method="post">
+                <br /><br /><br />
+                <input type="submit" class="btn btn-primary" value="Done" />
+            </form>
+
+
+
+        </div>
+    
+
+
+</body>

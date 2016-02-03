@@ -1,0 +1,65 @@
+﻿@model term.Models.User
+
+@{
+    ViewBag.Title = "Profile";
+    Layout = "~/Views/Shared/UserNavBar.cshtml";
+}
+
+<div>
+    <div>
+        <div>
+            @using (Html.BeginForm("UpdateProfile", "User", FormMethod.Post, new { @class = "form-horizontal" }))
+            {
+
+                @Html.ValidationSummary(true);
+                <fieldset>
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.Name, new { @class = "control-label col-md-3" })
+                        <div class="col-md-4">
+
+                            @Html.TextBoxFor(x => x.Name, new { required = "required" })
+                            @Html.ValidationMessageFor(m => m.Name)
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.Email, new { @class = "control-label col-md-3" })
+                        <div class="col-md-4">
+
+                            @Html.TextBoxFor(x => x.Email, new { @readonly = "readonly" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.Address, new { @class = "control-label col-md-3" })
+                        <div class="col-md-4">
+                            @Html.TextBoxFor(x => x.Address, new { required = "required" })
+                            @Html.ValidationMessageFor(m => m.Address)
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.UserName, new { @class = "control-label col-md-3" })
+                        <div class="col-md-4">
+                            @Html.TextBoxFor(x => x.UserName, new { @readonly = "readonly" })
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        @Html.LabelFor(x => x.Password, new { @class = "control-label col-md-3" })
+                        <div class="col-md-4">
+                            @Html.PasswordFor(x => x.Password, new { required = "required" })
+                        </div>
+                    </div>
+
+
+                    <div class="form-group" style="margin-left: 25%">
+                        <input type="submit" value="Update Profile" class="btn btn-lg btn-success" />
+                    </div>
+
+                </fieldset>
+            }
+        </div>
+    </div>
+</div>

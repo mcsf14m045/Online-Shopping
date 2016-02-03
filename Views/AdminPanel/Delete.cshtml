@@ -1,0 +1,41 @@
+﻿@using term.Models
+@model IEnumerable<Item>
+
+@{
+    Layout = "~/Views/Shared/AdminNavBar.cshtml";
+}
+<body style="background-color:black">
+    <div>
+        <label class="text-center" style="font-size: 70px; font-family: Stencil; color: #d49c43; width: 100%;">Delete</label>
+    </div>
+    <br>
+    <br />
+    <div class="container well well-sm col-lg-8" style="margin-left:15%">
+        <table class="table" style="border: solid; border-color: #d49c43">
+
+            <thead>
+                <tr class="" style="text-align: center; background-color: #d49c43">
+
+                    <th>ID</th>
+                    <th>Name</th>
+
+                    <th>Delete</th>
+                </tr>
+            </thead>
+
+            @foreach (Item obj in Model)
+            {
+                <tr>
+                    <td>@obj.Id</td>
+                    <td>@obj.Name</td>
+
+
+                    <td><a href="/AdminPanel/deleteForm/@obj.Id" style="color: #d49c43">Delete</a></td>
+                </tr>
+
+            }
+
+
+        </table>
+    </div>
+</body>
